@@ -20,62 +20,59 @@ public class lap1{
             }
         }
 
-        isPalindrom(arrayToFill, limit);
+        isPalindrom(arrayToFill, limit); // calling the palindrom method to cheak the array!
 
 
     }
 
-
+    // Chakhing if the array palindrom or not!/////////////////////////////////////
     public static boolean isPalindrom(int[] originalArray, int limit){
 
-
-        
-        int[] reArray =  new int[30];
-
+        // new array to stor the reverse of the original Array!
+        int[] reArray =  new int[30]; 
         for(int i = 0 , j = limit - 1; i < limit ; i++ , j--){
 
             reArray[i] = originalArray[j];
-
         }
+
+        // flage to cheak the condition
         boolean flag = true;
+        // for loop to cheak the equilty between the original and the reverse one!
         for(int i = 0; i < limit; i++){
 
-            if(reArray[i] != originalArray[i]){
+            if(reArray[i] != originalArray[i]){ 
 
                 flag = false;
                 break;
             }
-
-        
         }
+
+        //cheak the flag 
         if(flag == true){
 
-            displayArray(originalArray, limit);
-
+            displayArray(originalArray, limit);  // calling the print method to display the original array
             System.out.println("your array is palindrom!");
             return true;
         }
         else{
-            displayArray(originalArray, limit);
+
+            displayArray(originalArray, limit);  // calling the print method to display the original array
             System.out.println("your array is not palindrom!");
             return false;
 
-
         }
-
-
 
         
     }
 
-
-
+    // Method to display the origianl array that user Entered!///////////////////
     public static void displayArray(int[] arrayToDisplay,int limit){
 
         System.out.print("Your array is : [");
         for(int i = 0; i < limit; i++){
 
             int number = arrayToDisplay[i];
+            // condition to cheak if it's the last number it will print it without comma (orgnaiz the output just!)
             if( i == limit -1){
                 System.out.println(number+"]");
                 break;
@@ -83,19 +80,9 @@ public class lap1{
             System.out.print(number +",");
         }
 
-
-
     }
 
-
-
-
-
-
-
-
-
-
+////////////////////////////////////main Method//////////////////////////////
 
 public static void main(String[] args){
 
@@ -103,11 +90,6 @@ public static void main(String[] args){
 
    System.out.println("Enter only 5 numbers");
    readUserSequence(array, limit);
-
-
-
-
-
 
 
 
